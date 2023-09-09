@@ -76,15 +76,8 @@ struct widgetKitDemoEntryView : View {
     var entry: Provider.Entry
     
     @Environment(\.widgetFamily) var family
-    //
+
     @Environment(\.managedObjectContext) private var viewContext
-    //
-    //    @FetchRequest(entity: FruitEntity.entity(),
-    //                  sortDescriptors: [NSSortDescriptor(keyPath: \FruitEntity.name, ascending: true)])
-    //
-    //    var fruits:FetchedResults<FruitEntity>
-    
-    
     
     @FetchRequest(
         sortDescriptors: [NSSortDescriptor(keyPath: \FruitEntity.timestamp, ascending: true)],
@@ -156,50 +149,10 @@ struct widgetKitDemoEntryView : View {
                                             .background(Color(UIColor(red: 1, green: 1, blue: 1, alpha: 0.05).cgColor))
                                             .cornerRadius(15)
                                             
-//                                        }
-//                                    }
-//                                        ForEach(items) { item in
-//                                            HStack(spacing: 6){
-//                                                Image(systemName: "circle").foregroundColor(.white).frame(width: 12, height: 12)
-//                                                VStack(alignment: .leading,spacing: 4, content: {
-//                                                    Text(item.name!).foregroundColor(.white).lineLimit(1).font(.custom("Satoshi-Regular", size: 12))
-//                                                })
-//                                            }
-//                                            .padding(EdgeInsets(top: 6, leading: 10, bottom: 6, trailing: 10))
-//                                            .frame(width: 126, height: 28,alignment: .leading)
-//                                            .background(Color(UIColor(red: 1, green: 1, blue: 1, alpha: 0.05).cgColor))
-//                                            .cornerRadius(15)
-//                                            Divider()
-
 
                                         }
                                     }
                                 }
-//                            Grid {
-//                                GridRow {
-//                                    ForEach(items) { item in
-//                                        HStack(spacing: 6){
-//                                            Image(systemName: "circle").foregroundColor(.white).frame(width: 12, height: 12)
-//                                            VStack(alignment: .leading,spacing: 4, content: {
-//                                                Text(item.name!).foregroundColor(.white).lineLimit(1).font(.custom("Satoshi-Regular", size: 12))
-//                                            })
-//                                        }
-//                                        .padding(EdgeInsets(top: 6, leading: 10, bottom: 6, trailing: 10))
-//                                        .frame(width: 126, height: 28,alignment: .leading)
-//                                        .background(Color(UIColor(red: 1, green: 1, blue: 1, alpha: 0.05).cgColor))
-//                                        .cornerRadius(15)
-//                                        Divider()
-//
-//
-//                                    }
-//                                }
-//                                //                                GridRow {
-//                                //                                    Image(systemName: "hand.wave")
-//                                //                                    Text("World")
-//                                //                                }
-//                            }
-                            //                            .frame(width:200,height: 60).background(Color.yellow)
-                            
                             
                         }
                         
